@@ -9,12 +9,15 @@ class HandlerGenerator
 {
     protected $readFilesystem;
     protected $writeFilesystem;
-    public function __construct(){
+
+    public function __construct()
+    {
         $readAdapter = new Local(__DIR__.'/../../config/stubs/');
         $writeAdapter = new Local(__DIR__.'/../../generated/');
         $this->readFilesystem = new Filesystem($readAdapter);
         $this->writeFilesystem = new Filesystem($writeAdapter);
     }
+
     public function generate()
     {
         $stubContent = $this->readStub();
@@ -33,15 +36,17 @@ class HandlerGenerator
     private function processStub(string $stubContent)
     {
         $processedStub = str_replace('<Model>', 'Client', $stubContent);
+
         return $processedStub;
     }
 
     private function save(string $processedStub)
     {
-        $this->writeFilesystem->write('ClientHandler.php', $processedStub );
+        $this->writeFilesystem->write('ClientHandler.php', $processedStub);
     }
 
-    private function register($handlerName){
+    private function register($handlerName)
+    {
         app()->singleton($handlerName::class, function () use ($handlerName) {
             return new $handlerName();
         });
