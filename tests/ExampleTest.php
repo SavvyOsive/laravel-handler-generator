@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Tests;
+namespace Savvyosive\HandlerGenerator\Tests;
 
 class ExampleTest extends TestCase
 {

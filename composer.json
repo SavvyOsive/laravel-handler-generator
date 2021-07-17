@@ -1,17 +1,17 @@
 {
-    "name": "vendor_slug/package_slug",
-    "description": ":package_description",
+    "name": "savvyosive/laravel-handler-generator",
+    "description": "This is my package HandlerGenerator",
     "keywords": [
-        ":vendor_name",
+        "SavvyOsive",
         "laravel",
-        "package_slug"
+        "laravel-handler-generator"
     ],
-    "homepage": "https://github.com/vendor_slug/package_slug",
+    "homepage": "https://github.com/savvyosive/laravel-handler-generator",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "SavvyOsive",
+            "email": "savvy.osive@gmail.com",
             "role": "Developer"
         }
     ],
@@ -30,13 +30,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Savvyosive\\HandlerGenerator\\": "src",
+            "Savvyosive\\HandlerGenerator\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Savvyosive\\HandlerGenerator\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -50,10 +50,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Savvyosive\\HandlerGenerator\\HandlerGeneratorServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\SkeletonFacade"
+                "HandlerGenerator": "Savvyosive\\HandlerGenerator\\HandlerGeneratorFacade"
             }
         }
     },
