@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Savvyosive\HandlerGenerator\Tests\Feature\Commands;
 
 use Savvyosive\HandlerGenerator\Tests\TestCase;
@@ -29,5 +28,4 @@ class HandlerGeneratorCommandTest extends TestCase
             ->expectsOutput($text)
             ->assertExitCode(0);
     }
-
 }
