@@ -8,7 +8,7 @@ class HandlerGeneratorCommand extends Command
 {
     public $signature = 'laravel-handler-generator';
 
-    public $description = 'My command';
+    public $description = 'Generate Handlers For Your Models';
 
     public function handle()
     {
