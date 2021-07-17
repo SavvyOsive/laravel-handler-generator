@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Savvyosive\HandlerGenerator\Tests\Feature\Commands;
 
 use Savvyosive\HandlerGenerator\Tests\TestCase;
@@ -12,5 +11,4 @@ class HandlerGeneratorCommandTest extends TestCase
     {
         $this->artisan('laravel-handler-generator')->assertExitCode(0);
     }
-
 }
