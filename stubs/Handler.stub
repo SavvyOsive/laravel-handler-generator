@@ -1,0 +1,21 @@
+<?php
+
+
+namespace App\Handlerss;
+
+use App\Models\<Model>;
+use App\Handlers\Contracts\HandlerInterface;
+use App\Traits\Handler\HandlerTrait;
+
+/**
+ * Class <Model>Handler
+ *
+ * @package App\Handlers
+ */
+class <Model>Handler implements HandlerInterface
+{
+    use HandlerTrait;
+
+    public $model = <Model>::class;
+
+}

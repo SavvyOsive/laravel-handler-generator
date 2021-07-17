@@ -12,6 +12,8 @@ class HandlerGeneratorCommand extends Command
 
     public function handle()
     {
-        $this->comment('All done');
+        $outputText = config('handler-generator.stub_directory');
+
+        $this->comment($outputText);
     }
 }

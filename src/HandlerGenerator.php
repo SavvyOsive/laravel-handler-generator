@@ -25,7 +25,7 @@ class HandlerGenerator
 
     private function readStub()
     {
-        $stubContent = $this->readFilesystem->read("Handler.stub");
+        $stubContent = $this->readFilesystem->read("Handler.stubs");
 
         return $stubContent;
     }
