@@ -3,7 +3,6 @@
 namespace Savvyosive\HandlerGenerator\Commands;
 
 use Illuminate\Console\Command;
-use Savvyosive\HandlerGenerator\HandlerGenerator;
 
 class HandlerGeneratorCommand extends Command
 {
