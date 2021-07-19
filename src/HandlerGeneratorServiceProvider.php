@@ -2,9 +2,9 @@
 
 namespace Savvyosive\HandlerGenerator;
 
-use Savvyosive\HandlerGenerator\Commands\HandlerGeneratorCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Savvyosive\HandlerGenerator\Commands\HandlerGeneratorCommand;
 
 class HandlerGeneratorServiceProvider extends PackageServiceProvider
 {
@@ -21,6 +21,5 @@ class HandlerGeneratorServiceProvider extends PackageServiceProvider
             ->hasViews()
             ->hasMigration('create_laravel-handler-generator_table')
             ->hasCommand(HandlerGeneratorCommand::class);
-
     }
 }

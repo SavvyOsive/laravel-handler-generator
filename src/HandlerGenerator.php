@@ -7,13 +7,13 @@ use League\Flysystem\Filesystem;
 
 class HandlerGenerator
 {
-    protected $readFilesystem;
-    protected $writeFilesystem;
+    protected Filesystem $readFilesystem;
+    protected Filesystem $writeFilesystem;
 
     public function __construct()
     {
-        $readAdapter = new Local(__DIR__.'/../../config/stubs/');
-        $writeAdapter = new Local(__DIR__.'/../../generated/');
+        $readAdapter = new Local(__DIR__.'/../stubs/');
+        $writeAdapter = new Local(__DIR__.'/../generated/');
         $this->readFilesystem = new Filesystem($readAdapter);
         $this->writeFilesystem = new Filesystem($writeAdapter);
     }
@@ -28,7 +28,7 @@ class HandlerGenerator
 
     private function readStub()
     {
-        $stubContent = $this->readFilesystem->read("Handler.stubs");
+        $stubContent = $this->readFilesystem->read("Handler.stub");
 
         return $stubContent;
     }
