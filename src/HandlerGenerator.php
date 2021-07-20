@@ -28,10 +28,10 @@ class HandlerGenerator
         $models = $this->getListOfModelFilesToProcess();
         $stubContent = $this->readStub();
 
-        if ($models !== null){
-            foreach ($models as $model){
+        if ($models !== null) {
+            foreach ($models as $model) {
                 // check if these operations are already performed for that model or not
-                $modelName = str_replace('.php','',$model);
+                $modelName = str_replace('.php', '', $model);
                 $processedStub = $this->processStub($stubContent, $modelName);
                 $this->save($processedStub, $modelName);
                 $this->register("$modelName.handler");
@@ -47,7 +47,7 @@ class HandlerGenerator
         $iterator = new \RecursiveIteratorIterator($recursiveDirectoryIterator);
         foreach ($iterator as $file) {
             $validModelFile = $this->checkValidModelFile($file);
-            if ($validModelFile){
+            if ($validModelFile) {
                 $modelFile = $file->getFilename();
                 $modelFilesToProcess[] = $modelFile;
             }
@@ -56,7 +56,7 @@ class HandlerGenerator
         return $modelFilesToProcess;
     }
 
-    private function checkValidModelFile($modelFile):bool
+    private function checkValidModelFile($modelFile): bool
     {
         $validFile = false;
         $modelFilePath = $modelFile->getPathname();
@@ -67,7 +67,7 @@ class HandlerGenerator
         // or check pattern for " class <name> extends Model "
         // if the class is direct children of Model
         $search = 'extends Model';
-        if(str_contains($fileContent, $search)){
+        if (str_contains($fileContent, $search)) {
             $validFile = true;
         }
 
