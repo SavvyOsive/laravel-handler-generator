@@ -2,9 +2,9 @@
 
 namespace Savvyosive\HandlerGenerator;
 
+use Savvyosive\HandlerGenerator\Commands\HandlerGeneratorCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Savvyosive\HandlerGenerator\Commands\HandlerGeneratorCommand;
 
 class HandlerGeneratorServiceProvider extends PackageServiceProvider
 {
