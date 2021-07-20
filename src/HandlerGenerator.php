@@ -10,6 +10,11 @@ class HandlerGenerator
     protected Filesystem $readFilesystem;
     protected Filesystem $writeFilesystem;
 
+    public static function handler(): self
+    {
+        return new static();
+    }
+
     public function __construct()
     {
         $readAdapter = new Local(__DIR__.'/../stubs/');
@@ -47,7 +52,7 @@ class HandlerGenerator
 
     private function register($handlerName)
     {
-        app()->singleton($handlerName::class, function () use ($handlerName) {
+        app()->singleton($handlerName, function () use ($handlerName) {
             return new $handlerName();
         });
     }

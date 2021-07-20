@@ -18,8 +18,10 @@ class HandlerGeneratorServiceProvider extends PackageServiceProvider
         $package
             ->name('laravel-handler-generator')
             ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_laravel-handler-generator_table')
+            //->hasViews()
+            //->hasMigration('create_laravel-handler-generator_table')
             ->hasCommand(HandlerGeneratorCommand::class);
+
+        //HandlerGenerator::handler()->generate();
     }
 }

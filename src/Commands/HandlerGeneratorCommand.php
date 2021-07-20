@@ -13,8 +13,8 @@ class HandlerGeneratorCommand extends Command
 
     public function handle()
     {
-        $outputText = config('handler-generator.stub_directory');
+        HandlerGenerator::handler()->generate();
 
-        $this->comment($outputText);
+        $this->comment('Generated Handlers for models ....');
     }
 }
